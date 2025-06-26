@@ -35,4 +35,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: iss-api-response
-          path: /iss_response.json
+          path: /tmp/iss_response.json
