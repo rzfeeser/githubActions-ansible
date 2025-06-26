@@ -14,7 +14,7 @@ jobs:
       - name: Send GET request to example API
         run: |
           echo "Sending GET request..."
-          curl -s -o response.json -w "%{http_code}" https://api.open-notify.org/iss-now.json
+          curl -s -o response.json -w "%{http_code}" http://api.open-notify.org/iss-now.json
 
       - name: Show the response
         run: cat response.json
