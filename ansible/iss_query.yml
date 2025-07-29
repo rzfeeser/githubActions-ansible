@@ -12,7 +12,7 @@
 
     - name: i can safely pull a secret
       debug:
-        var: "{{ lookup('ansible.builtin.env', 'MYPASSWORD') }}"
+        msg: "{{ lookup('ansible.builtin.env', 'MYPASSWORD') }}"
         
     - name: Save JSON response to file
       ansible.builtin.copy:          # module or path to a python script (ansible/builtin/copy.py)
