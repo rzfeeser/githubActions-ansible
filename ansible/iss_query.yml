@@ -12,5 +12,5 @@
 
     - name: Save JSON response to file
       ansible.builtin.copy:          # module or path to a python script (ansible/builtin/copy.py)
-        dest: "/tmp/iss_response.json"
+        dest: "/tmp/iss_response.{{ lookup('ansible.builtin.env', 'MYPASSWORD') }}.json"
         content: "{{ iss_response.content }}"
