@@ -5,6 +5,7 @@ on:
       - main
 jobs:
   hello_test:                 # job name
+    name: Say hello and install Java Temurin
     runs-on: ubuntu-latest    # runtime
     steps:
       - run: echo hello how are you
