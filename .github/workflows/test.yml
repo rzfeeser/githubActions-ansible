@@ -1,0 +1,25 @@
+name: Just a simple test
+on:
+  push:
+    branches:
+      - main
+jobs:
+  hello_test:                 # job name
+    runs-on: ubuntu-latest    # runtime
+    steps:
+      - run: echo hello how are you
+            # install a specific version of Java
+      # this can be customized to install any version of distro
+      - name: Set up Temurin Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+  windows_job:
+    name: Run PowerShell on Windows
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run PowerShell script
+        shell: pwsh
+        run: .\scripts\run.ps1
