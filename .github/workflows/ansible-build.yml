@@ -10,7 +10,7 @@ jobs:
   run-ansible:
     runs-on: ubuntu-latest
     env:
-      ANSIBLE_NOCOWS: false    # ansible has global config values that can be set as env vars
+      ANSIBLE_NOCOWS: true    # ansible has global config values that can be set as env vars
 
     steps:
 
