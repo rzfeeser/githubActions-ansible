@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: install cows
-        run: apt install cowsay -y
+        run: sudo apt install cowsay -y
 
       - name: Install Ansible
         run: |
