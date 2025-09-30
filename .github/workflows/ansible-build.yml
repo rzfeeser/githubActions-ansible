@@ -28,12 +28,6 @@ jobs:
       - name: Run Ansible playbook                # here we actually call ansible and the playbook (ansible code)
         run: ansible-playbook -i ansible/inventory ansible/iss_query.yml
 
-      - name: Run Ansible playbook                # here we actually call ansible and the playbook (ansible code)
-        run: pwd
-
-      - name: Run Ansible playbook                # here we actually call ansible and the playbook (ansible code)
-        run: ls -la
-
       - name: Upload API response as artifact     # we want to save the results of our ansible playbook
         uses: actions/upload-artifact@v4
         with:
